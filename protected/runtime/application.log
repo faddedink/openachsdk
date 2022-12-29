@@ -1,0 +1,190 @@
+2022/12/28 20:55:51 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "assets/js/jquery.form.js". in /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/www/openach/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/js/jquery.form.js
+HTTP_REFERER=http://localhost/app.php
+---
+2022/12/28 20:55:51 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "assets/js/jquery-ui-local-mods.js". in /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/www/openach/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/js/jquery-ui-local-mods.js
+HTTP_REFERER=http://localhost/app.php
+---
+2022/12/28 20:55:51 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "assets/js/jquery-simple-spinner.js". in /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/www/openach/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/js/jquery-simple-spinner.js
+HTTP_REFERER=http://localhost/app.php
+---
+2022/12/28 20:55:51 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "assets/js/application.js". in /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/www/openach/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/js/application.js
+HTTP_REFERER=http://localhost/app.php
+---
+2022/12/28 20:55:51 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "assets/js/jquery.form.js". in /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/www/openach/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/js/jquery.form.js
+HTTP_REFERER=http://localhost/app.php
+---
+2022/12/28 20:55:51 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "assets/js/jquery-ui-local-mods.js". in /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/www/openach/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/js/jquery-ui-local-mods.js
+HTTP_REFERER=http://localhost/app.php
+---
+2022/12/28 20:55:51 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "assets/js/jquery-simple-spinner.js". in /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/www/openach/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/js/jquery-simple-spinner.js
+HTTP_REFERER=http://localhost/app.php
+---
+2022/12/28 20:55:51 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "assets/js/application.js". in /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/www/openach/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/js/application.js
+HTTP_REFERER=http://localhost/app.php
+---
+2022/12/28 20:57:38 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "docs/openach-apt.html". in /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/www/openach/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/docs/openach-apt.html
+---
+2022/12/28 23:41:09 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 5 database is locked. The SQL statement executed was: INSERT INTO 'user' ("user_status", "user_login", "user_password", "user_email_address", "user_first_name", "user_last_name", "user_id") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6).
+2022/12/28 23:41:09 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 5 database is locked. The SQL statement executed was: INSERT INTO 'user' ("user_status", "user_login", "user_password", "user_email_address", "user_first_name", "user_last_name", "user_id") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6) in /home/www/openach/vendor/yiisoft/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(1083): CDbCommand->execute()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/db/ar/CActiveRecord.php(811): CActiveRecord->insert()
+#2 /home/www/openach/protected/commands/UserCommand.php(39): CActiveRecord->save()
+#3 [internal function]: UserCommand->actionCreate()
+#4 /home/www/openach/vendor/yiisoft/yii/framework/console/CConsoleCommand.php(178): ReflectionMethod->invokeArgs()
+#5 /home/www/openach/vendor/yiisoft/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run()
+#6 /home/www/openach/vendor/yiisoft/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#7 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#8 /home/www/openach/vendor/yiisoft/yii/framework/yiic.php(33): CApplication->run()
+#9 /home/www/openach/protected/yiic.php(9): require_once('/home/www/opena...')
+#10 /home/www/openach/protected/yiic(4): require_once('/home/www/opena...')
+#11 {main}
+---
+2022/12/29 02:34:19 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "mobileapp/index.php". in /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/www/openach/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/mobileapp/index.php
+---
+2022/12/29 02:37:34 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "views/userApi/view.php". in /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/www/openach/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/views/userApi/view.php
+---
+2022/12/29 02:45:32 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "admin". in /home/www/openach/vendor/yiisoft/yii/framework/web/CController.php:486
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CController.php(270): CController->missingAction()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(282): CController->run()
+#2 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#3 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /home/www/openach/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/admin
+---
+2022/12/29 03:40:13 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "vendors". in /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/www/openach/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/vendors
+---
+2022/12/29 04:46:46 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "views". in /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/www/openach/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/views
+---
+2022/12/29 04:47:13 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "views/admin". in /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/www/openach/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/views/admin
+---
+2022/12/29 04:47:29 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "views/admin/index.php". in /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/www/openach/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/views/admin/index.php
+---
+2022/12/29 04:47:37 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "index.php". in /home/www/openach/vendor/yiisoft/yii/framework/web/CController.php:486
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CController.php(270): CController->missingAction()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(282): CController->run()
+#2 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#3 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /home/www/openach/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/index.php
+---
+2022/12/29 13:55:53 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "test.php". in /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/www/openach/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/test.php
+---
+2022/12/29 13:56:56 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "saveExternalAccount.php". in /home/www/openach/vendor/yiisoft/yii/framework/web/CController.php:486
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CController.php(270): CController->missingAction()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(282): CController->run()
+#2 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#3 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /home/www/openach/index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/saveExternalAccount.php
+---
+2022/12/29 14:08:36 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "key.". in /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/www/openach/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /home/www/openach/vendor/yiisoft/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/www/openach/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/key.
+---
