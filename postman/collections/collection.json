@@ -1,0 +1,855 @@
+{
+	"info": {
+		"_postman_id": "4918169c-9443-48e4-8c9f-78e27cfa147e",
+		"name": "collection",
+		"description": "OpenACH is an open-source ACH origination platform.  A powerful feature of OpenACH is \nthat it can easily be integrated with other systems - both as a payment gateway for \ne-commerce, billing systems, etc., and as a source of data for customer portals, \naccounting systems, CRM systems, and more. All of this is accomplished through a simple \nand secure REST/JSON API which can be used independently or through the OpenACH PHP SDK.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "25110573-4918169c-9443-48e4-8c9f-78e27cfa147e"
+	},
+	"item": [
+		{
+			"name": "{{baseUrl}}/connect",
+			"id": "50f62b36-5aa2-4b2b-b7b8-246d8771c35c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/connect?user_api_token=dolor ullamco deserunt magna&user_api_key=dolor ullamco deserunt magna",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"connect"
+					],
+					"query": [
+						{
+							"key": "user_api_token",
+							"value": "dolor ullamco deserunt magna",
+							"description": "(Required) "
+						},
+						{
+							"key": "user_api_key",
+							"value": "dolor ullamco deserunt magna",
+							"description": "(Required) "
+						}
+					]
+				},
+				"description": "A successful call to the _connect_ endpoint will return a _session_id_, as well as a header with this same value stored in the _PHPSESSID_ cookie.  **All subsequent requests need to pass this value in the _PHPSESSID_ cookie header.**  For example:\n\n```\n\n  Accept: application/json\n\n  Cookie: PHPSESSID=2cngluuab2ljqpsi47j1cv08o5\n\n```\n"
+			},
+			"response": [
+				{
+					"id": "d59d6c32-a7c5-4e1f-8d28-a68b3ad54ff7",
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/connect?user_api_token=dolor ullamco deserunt magna&user_api_key=dolor ullamco deserunt magna",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"connect"
+							],
+							"query": [
+								{
+									"key": "user_api_token",
+									"value": "dolor ullamco deserunt magna"
+								},
+								{
+									"key": "user_api_key",
+									"value": "dolor ullamco deserunt magna"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"success\": true,\n  \"session_id\": \"2cngluuab2ljqpsi47j1cv08o5\"\n}"
+				}
+			]
+		},
+		{
+			"name": "{{baseUrl}}/disconnect",
+			"id": "bf38a7ec-49ad-4d89-b02d-8874ed467fc2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/disconnect",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"disconnect"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "ca5e4014-be8c-424f-b7ee-c20ff0d1810f",
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/disconnect",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"disconnect"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"success\": true,\n  \"session_id\": \"2cngluuab2ljqpsi47j1cv08o5\"\n}"
+				}
+			]
+		},
+		{
+			"name": "{{baseUrl}}/getPaymentProfile",
+			"id": "b718d65b-a1ed-40a0-b0cd-8b84b40fd2cb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"payment_profile_id\": \"ad nostrud dolor ullamco\",\n  \"payment_profile_originator_info_id\": \"dolor eu reprehenderit\",\n  \"payment_profile_external_id\": \"fugiat ipsum voluptate quis sed\",\n  \"payment_profile_password\": \"Duis\",\n  \"payment_profile_first_name\": \"Excepteur qui ullamco esse occaecat\",\n  \"payment_profile_last_name\": \"veniam elit\",\n  \"payment_profile_email_address\": \"qui Duis deserunt dolore\",\n  \"payment_profile_security_question_1\": \"Lorem dolor\",\n  \"payment_profile_security_question_2\": \"ex sit proident\",\n  \"payment_profile_security_question_3\": \"non ullamco\",\n  \"payment_profile_security_answer_1\": \"ex\",\n  \"payment_profile_security_answer_2\": \"irure \",\n  \"payment_profile_security_answer_3\": \"nisi\",\n  \"payment_profile_status\": \"in adipisi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/getPaymentProfile?payment_profile_id=dolor ullamco deserunt magna",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getPaymentProfile"
+					],
+					"query": [
+						{
+							"key": "payment_profile_id",
+							"value": "dolor ullamco deserunt magna",
+							"description": "(Required) "
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "7afde6da-85b5-4d30-aab4-f73b6b51f287",
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getPaymentProfile?payment_profile_id=dolor ullamco deserunt magna",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getPaymentProfile"
+							],
+							"query": [
+								{
+									"key": "payment_profile_id",
+									"value": "dolor ullamco deserunt magna"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"payment_profile_id\": \"5a47698e-38c9-405e-99cd-8429599b1b23\",\n  \"payment_profile_originator_info_id\": \"5ca86942-1af9-4abb-a9c3-a4bb837c73b5\",\n  \"payment_profile_external_id\": \"customer-15141\",\n  \"payment_profile_password\": \"supersecret\",\n  \"payment_profile_first_name\": \"Smith\",\n  \"payment_profile_email_address\": \"henry.smith@example.com\",\n  \"payment_profile_security_question_1\": \"What is your name?\",\n  \"payment_profile_security_question_2\": \"What is your quest?\",\n  \"payment_profile_security_question_3\": \"What is the airspeed velocity of an unladen swallow?\",\n  \"payment_profile_security_answer_1\": \"Arthur, King of the Britons\",\n  \"payment_profile_security_answer_2\": \"To seek the Holy Grail\",\n  \"payment_profile_security_answer_3\": \"African or European swallow?\",\n  \"payment_profile_status\": \"enabled\"\n}"
+				}
+			]
+		},
+		{
+			"name": "{{baseUrl}}/getPaymentProfileByExtId",
+			"id": "1ccdc704-d6fd-4da8-acd5-8aaf678806e8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/getPaymentProfileByExtId?payment_profile_external_id=dolor ullamco deserunt magna",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getPaymentProfileByExtId"
+					],
+					"query": [
+						{
+							"key": "payment_profile_external_id",
+							"value": "dolor ullamco deserunt magna",
+							"description": "(Required) External ID (public, e.g. for external reference)"
+						}
+					]
+				},
+				"description": "OpenACH allows you to reference payment profiles by their \"external id' - an ID that\n  the entity is known by in your system (e.g. \"external\" to OpenACH).\n"
+			},
+			"response": [
+				{
+					"id": "614db553-7487-4c26-af0d-71594183934b",
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getPaymentProfileByExtId?payment_profile_external_id=dolor ullamco deserunt magna",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getPaymentProfileByExtId"
+							],
+							"query": [
+								{
+									"key": "payment_profile_external_id",
+									"value": "dolor ullamco deserunt magna"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"payment_profile_id\": \"5a47698e-38c9-405e-99cd-8429599b1b23\",\n  \"payment_profile_originator_info_id\": \"5ca86942-1af9-4abb-a9c3-a4bb837c73b5\",\n  \"payment_profile_external_id\": \"customer-15141\",\n  \"payment_profile_password\": \"supersecret\",\n  \"payment_profile_first_name\": \"Smith\",\n  \"payment_profile_email_address\": \"henry.smith@example.com\",\n  \"payment_profile_security_question_1\": \"What is your name?\",\n  \"payment_profile_security_question_2\": \"What is your quest?\",\n  \"payment_profile_security_question_3\": \"What is the airspeed velocity of an unladen swallow?\",\n  \"payment_profile_security_answer_1\": \"Arthur, King of the Britons\",\n  \"payment_profile_security_answer_2\": \"To seek the Holy Grail\",\n  \"payment_profile_security_answer_3\": \"African or European swallow?\",\n  \"payment_profile_status\": \"enabled\"\n}"
+				}
+			]
+		},
+		{
+			"name": "{{baseUrl}}/savePaymentProfile",
+			"id": "d40abe9b-7b9c-44a3-8bd0-e54aad04dbe4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"payment_profile_id\": \"ad nostrud dolor ullamco\",\n  \"payment_profile_originator_info_id\": \"dolor eu reprehenderit\",\n  \"payment_profile_external_id\": \"fugiat ipsum voluptate quis sed\",\n  \"payment_profile_password\": \"Duis\",\n  \"payment_profile_first_name\": \"Excepteur qui ullamco esse occaecat\",\n  \"payment_profile_last_name\": \"veniam elit\",\n  \"payment_profile_email_address\": \"qui Duis deserunt dolore\",\n  \"payment_profile_security_question_1\": \"Lorem dolor\",\n  \"payment_profile_security_question_2\": \"ex sit proident\",\n  \"payment_profile_security_question_3\": \"non ullamco\",\n  \"payment_profile_security_answer_1\": \"ex\",\n  \"payment_profile_security_answer_2\": \"irure \",\n  \"payment_profile_security_answer_3\": \"nisi\",\n  \"payment_profile_status\": \"in adipisi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/savePaymentProfile",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"savePaymentProfile"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "56c4e548-8d37-4eaf-8c7c-0dda804a0bf6",
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/savePaymentProfile",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"savePaymentProfile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"payment_profile_id\": \"5a47698e-38c9-405e-99cd-8429599b1b23\",\n  \"payment_profile_originator_info_id\": \"5ca86942-1af9-4abb-a9c3-a4bb837c73b5\",\n  \"payment_profile_external_id\": \"customer-15141\",\n  \"payment_profile_password\": \"supersecret\",\n  \"payment_profile_first_name\": \"Smith\",\n  \"payment_profile_email_address\": \"henry.smith@example.com\",\n  \"payment_profile_security_question_1\": \"What is your name?\",\n  \"payment_profile_security_question_2\": \"What is your quest?\",\n  \"payment_profile_security_question_3\": \"What is the airspeed velocity of an unladen swallow?\",\n  \"payment_profile_security_answer_1\": \"Arthur, King of the Britons\",\n  \"payment_profile_security_answer_2\": \"To seek the Holy Grail\",\n  \"payment_profile_security_answer_3\": \"African or European swallow?\",\n  \"payment_profile_status\": \"enabled\"\n}"
+				}
+			]
+		},
+		{
+			"name": "{{baseUrl}}/getExternalAccount",
+			"id": "48fb9f5c-6dac-465f-9d70-ecf8090f5f8d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/getExternalAccount?external_account_id=dolor ullamco deserunt magna",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getExternalAccount"
+					],
+					"query": [
+						{
+							"key": "external_account_id",
+							"value": "dolor ullamco deserunt magna",
+							"description": "(Required) "
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "70421f21-0633-4f09-8cbf-d6c4f14ed5ef",
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getExternalAccount?external_account_id=dolor ullamco deserunt magna",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getExternalAccount"
+							],
+							"query": [
+								{
+									"key": "external_account_id",
+									"value": "dolor ullamco deserunt magna"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"external_account_id\": \"085ecf6f-3298-42e0-bbe5-196ca186b0d2\",\n  \"external_account_payment_profile_id\": \"87798775-bc35-46d1-81ef-0beacab16131\",\n  \"external_account_type\": \"checking\",\n  \"external_account_name\": \"My Checking Account\",\n  \"external_account_bank\": \"US Bank\",\n  \"external_account_holder\": \"Henry Smith\",\n  \"external_account_country_code\": \"US\",\n  \"external_account_dfi_id\": 101000187,\n  \"external_account_number\": \"123456790\",\n  \"external_account_billing_address\": \"123 Easy Street\",\n  \"external_account_billing_city\": \"Anytown\",\n  \"external_account_billing_state_province\": \"NY\",\n  \"external_account_billing_postal_code\": \"12345\",\n  \"external_account_business\": true,\n  \"external_account_status\": \"enabled\"\n}"
+				}
+			]
+		},
+		{
+			"name": "{{baseUrl}}/saveExternalAccount",
+			"id": "62c62d0d-6a21-4128-909f-e6f7f86c2e51",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"external_account_id\": \"minim elit ad\",\n  \"external_account_datetime\": \"in et\",\n  \"external_account_payment_profile_id\": \"\",\n  \"external_account_type\": \"qui\",\n  \"external_account_name\": \"exercitation amet commodo esse\",\n  \"external_account_bank\": \"aliquip eu\",\n  \"external_account_holder\": \"sint consequat aliqua reprehenderit fugiat\",\n  \"external_account_country_code\": \"id ipsum do consectet\",\n  \"external_account_dfi_id\": \"sunt minim culpa\",\n  \"external_account_number\": \"sit enim labore\",\n  \"external_account_billing_address\": \"dolore ullamco laborum voluptate\",\n  \"external_account_billing_city\": \"tempor anim\",\n  \"external_account_billing_state_province\": \"amet\",\n  \"external_account_billing_postal_code\": \"eu elit sed\",\n  \"external_account_billing_country\": \"eu dolor\",\n  \"external_account_business\": true,\n  \"external_account_verification_status\": \"id Excepteur laboris occaecat\",\n  \"external_account_status\": \"Excepteur ex eu magna quis\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/saveExternalAccount",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"saveExternalAccount"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "f6238300-7971-42f3-9d1b-31712ea817cf",
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"external_account_id\": \"minim elit ad\",\n  \"external_account_datetime\": \"in et\",\n  \"external_account_payment_profile_id\": \"\",\n  \"external_account_type\": \"qui\",\n  \"external_account_name\": \"exercitation amet commodo esse\",\n  \"external_account_bank\": \"aliquip eu\",\n  \"external_account_holder\": \"sint consequat aliqua reprehenderit fugiat\",\n  \"external_account_country_code\": \"id ipsum do consectet\",\n  \"external_account_dfi_id\": \"sunt minim culpa\",\n  \"external_account_number\": \"sit enim labore\",\n  \"external_account_billing_address\": \"dolore ullamco laborum voluptate\",\n  \"external_account_billing_city\": \"tempor anim\",\n  \"external_account_billing_state_province\": \"amet\",\n  \"external_account_billing_postal_code\": \"eu elit sed\",\n  \"external_account_billing_country\": \"eu dolor\",\n  \"external_account_business\": true,\n  \"external_account_verification_status\": \"id Excepteur laboris occaecat\",\n  \"external_account_status\": \"Excepteur ex eu magna quis\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/saveExternalAccount",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"saveExternalAccount"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"external_account_id\": \"5a47698e-38c9-405e-99cd-8429599b1b23\",\n  \"external_account_payment_profile_id\": \"87798775-bc35-46d1-81ef-0beacab16131\",\n  \"external_account_type\": \"checking\",\n  \"external_account_name\": \"My Checking Account\",\n  \"external_account_bank\": \"US Bank\",\n  \"external_account_holder\": \"Henry Smith\",\n  \"external_account_country_code\": \"US\",\n  \"external_account_dfi_id\": 101000187,\n  \"external_account_number\": \"123456790\",\n  \"external_account_billing_address\": \"123 Easy Street\",\n  \"external_account_billing_city\": \"Anytown\",\n  \"external_account_billing_state_province\": \"NY\",\n  \"external_account_billing_postal_code\": \"12345\",\n  \"external_account_business\": true,\n  \"external_account_status\": \"enabled\"\n}"
+				}
+			]
+		},
+		{
+			"name": "{{baseUrl}}/getPaymentSchedule",
+			"id": "2e9435ca-919a-4917-940c-42ba2ee43480",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"payment_schedule_id\": \"non irure dolore in\",\n  \"payment_schedule_external_account_id\": \"offic\",\n  \"payment_schedule_payment_type_id\": \"est pariatur\",\n  \"payment_schedule_status\": \"commodo\",\n  \"payment_schedule_amount\": -26233023.61853072,\n  \"payment_schedule_currency_code\": \"labori\",\n  \"payment_schedule_next_date\": \"aute aliquip\",\n  \"payment_schedule_frequency\": \"minim dolore Dui\",\n  \"payment_schedule_end_date: `2017-03-05` (string) - The end date for the payment schedule.  Note that this should extend past the final transaction date, unless the freqency is _daily_\": \"in in\",\n  \"payment_schedule_remaining_occurrences\": -63044519.75425156\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/getPaymentSchedule?payment_schedule_id=dolor ullamco deserunt magna",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getPaymentSchedule"
+					],
+					"query": [
+						{
+							"key": "payment_schedule_id",
+							"value": "dolor ullamco deserunt magna",
+							"description": "(Required) "
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "fc5a6b07-9586-4ec9-be8c-35c939662ff3",
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getPaymentSchedule?payment_schedule_id=dolor ullamco deserunt magna",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getPaymentSchedule"
+							],
+							"query": [
+								{
+									"key": "payment_schedule_id",
+									"value": "dolor ullamco deserunt magna"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"payment_schedule_id\": \"7a3fc2ae-7bfb-41db-9d28-56b908d2ac65\",\n  \"payment_schedule_external_account_id\": \"87798775-bc35-46d1-81ef-0beacab16131\",\n  \"payment_schedule_payment_type_id\": \"7a3fc2ae-7bfb-41db-9d28-56b908d2ac65\",\n  \"payment_schedule_status\": \"enabled\",\n  \"payment_schedule_amount\": 100,\n  \"payment_schedule_currency_code\": \"USD\",\n  \"payment_schedule_next_date\": \"2017-03-01\",\n  \"payment_schedule_frequency\": \"once\",\n  \"payment_schedule_end_date\": \"2017-03-05\",\n  \"payment_schedule_remaining_occurrences\": 10\n}"
+				}
+			]
+		},
+		{
+			"name": "{{baseUrl}}/getPaymentSchedules",
+			"id": "73611bab-bcc4-41cf-8755-924cbe1e4214",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/getPaymentSchedules?payment_profile_id=dolor ullamco deserunt magna",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getPaymentSchedules"
+					],
+					"query": [
+						{
+							"key": "payment_profile_id",
+							"value": "dolor ullamco deserunt magna",
+							"description": "(Required) The internal ID (UUID) of the payment profile"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "08eab5f3-54c9-4c64-989e-8d05a5d9acec",
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getPaymentSchedules?payment_profile_id=dolor ullamco deserunt magna",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getPaymentSchedules"
+							],
+							"query": [
+								{
+									"key": "payment_profile_id",
+									"value": "dolor ullamco deserunt magna"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n  {\n    \"payment_schedule_id\": \"7a3fc2ae-7bfb-41db-9d28-56b908d2ac65\",\n    \"payment_schedule_external_account_id\": \"87798775-bc35-46d1-81ef-0beacab16131\",\n    \"payment_schedule_payment_type_id\": \"7a3fc2ae-7bfb-41db-9d28-56b908d2ac65\",\n    \"payment_schedule_status\": \"enabled\",\n    \"payment_schedule_amount\": 100,\n    \"payment_schedule_currency_code\": \"USD\",\n    \"payment_schedule_next_date\": \"2017-03-01\",\n    \"payment_schedule_frequency\": \"once\",\n    \"payment_schedule_end_date\": \"2017-03-05\",\n    \"payment_schedule_remaining_occurrences\": 10\n  }\n]"
+				}
+			]
+		},
+		{
+			"name": "{{baseUrl}}/savePaymentSchedule",
+			"id": "1478fddd-3ec2-408b-bef1-36abe8164eb3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"payment_schedule_id\": \"non irure dolore in\",\n  \"payment_schedule_external_account_id\": \"offic\",\n  \"payment_schedule_payment_type_id\": \"est pariatur\",\n  \"payment_schedule_status\": \"commodo\",\n  \"payment_schedule_amount\": -26233023.61853072,\n  \"payment_schedule_currency_code\": \"labori\",\n  \"payment_schedule_next_date\": \"aute aliquip\",\n  \"payment_schedule_frequency\": \"minim dolore Dui\",\n  \"payment_schedule_end_date: `2017-03-05` (string) - The end date for the payment schedule.  Note that this should extend past the final transaction date, unless the freqency is _daily_\": \"in in\",\n  \"payment_schedule_remaining_occurrences\": -63044519.75425156\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/savePaymentSchedule",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"savePaymentSchedule"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "19951836-f1c4-4c75-b996-638eda54e75b",
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/savePaymentSchedule",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"savePaymentSchedule"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"payment_schedule_id\": \"7a3fc2ae-7bfb-41db-9d28-56b908d2ac65\",\n  \"payment_schedule_external_account_id\": \"87798775-bc35-46d1-81ef-0beacab16131\",\n  \"payment_schedule_payment_type_id\": \"7a3fc2ae-7bfb-41db-9d28-56b908d2ac65\",\n  \"payment_schedule_status\": \"enabled\",\n  \"payment_schedule_amount\": 100,\n  \"payment_schedule_currency_code\": \"USD\",\n  \"payment_schedule_next_date\": \"2017-03-01\",\n  \"payment_schedule_frequency\": \"once\",\n  \"payment_schedule_end_date\": \"2017-03-05\",\n  \"payment_schedule_remaining_occurrences\": 10\n}"
+				}
+			]
+		},
+		{
+			"name": "{{baseUrl}}/getPaymentType",
+			"id": "46e7fae1-51bd-475d-83e5-b6a25b687be3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/getPaymentType?payment_type_id=dolor ullamco deserunt magna",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getPaymentType"
+					],
+					"query": [
+						{
+							"key": "payment_type_id",
+							"value": "dolor ullamco deserunt magna",
+							"description": "(Required) "
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "5a4b5dc8-16af-4be2-a38c-aca25ce8bb5b",
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getPaymentType?payment_type_id=dolor ullamco deserunt magna",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getPaymentType"
+							],
+							"query": [
+								{
+									"key": "payment_type_id",
+									"value": "dolor ullamco deserunt magna"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"payment_type_id\": \"7a3fc2ae-7bfb-41db-9d28-56b908d2ac65\",\n  \"payment_type_originator_info_id\": \"e4339d8b-1e47-4f14-af3b-deb9105fcadc\",\n  \"payment_type_name\": \"Web Payment\",\n  \"payment_type_transaction_type\": \"debit\",\n  \"payment_type_status\": \"enabled\",\n  \"payment_type_description\": \"A bill payment from our website\"\n}"
+				}
+			]
+		},
+		{
+			"name": "{{baseUrl}}/getPaymentTypes",
+			"id": "887f181a-bab4-4f52-a79c-078b1dd91956",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/getPaymentTypes",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"getPaymentTypes"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "af285627-95bf-405d-9fae-74e1d0731bed",
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/getPaymentTypes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"getPaymentTypes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n  {\n    \"payment_type_id\": \"7a3fc2ae-7bfb-41db-9d28-56b908d2ac65\",\n    \"payment_type_originator_info_id\": \"e4339d8b-1e47-4f14-af3b-deb9105fcadc\",\n    \"payment_type_name\": \"Web Payment\",\n    \"payment_type_transaction_type\": \"debit\",\n    \"payment_type_status\": \"enabled\",\n    \"payment_type_description\": \"A bill payment from our website\"\n  },\n  {\n    \"payment_type_id\": \"686f45b6-2be4-4dc0-8f87-88b4035ee565\",\n    \"payment_type_originator_info_id\": \"e4339d8b-1e47-4f14-af3b-deb9105fcadc\",\n    \"payment_type_name\": \"Refund\",\n    \"payment_type_transaction_type\": \"credit\",\n    \"payment_type_status\": \"enabled\",\n    \"payment_type_description\": \"For refunding of cancelled service.\"\n  }\n]"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "b9621f73-c2aa-4283-83e4-6ca0660043bb",
+			"key": "baseUrl",
+			"value": "https://openach.yourdomain.com/api",
+			"type": "string"
+		}
+	]
+}

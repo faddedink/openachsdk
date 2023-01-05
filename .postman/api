@@ -5,10 +5,14 @@ id = 987d4580-95ad-4418-970b-7adc7ca879d7
 
 [relations.collections]
 rootDirectory = postman/collections
+files[] = {"id":"25110573-4918169c-9443-48e4-8c9f-78e27cfa147e","path":"collection.json","metaData":{}}
 
 [relations.collections.metaData]
 
 [relations.apiDefinition]
 rootDirectory = postman/schemas
+files[] = {"path":"swagger.json","metaData":{}}
 
 [relations.apiDefinition.metaData]
+type = openapi:2
+rootFiles[] = swagger.json
